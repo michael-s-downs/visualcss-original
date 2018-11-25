@@ -1,0 +1,303 @@
+:root {
+/* CSS NOW EXPOSES VARIABLES! This seems to be the most organized and logical method to program CSS*/
+  --page-background: #ffffff;
+  --h3-text: #000000;
+  --h3-font: "Lucida Sans";
+  --p-text:  #000000;
+  --p-font:  "Lucida Sans";
+  --caption-text: #000000;
+  --caption-font:  "Lucida Sans";
+  --table-text: #000000;
+  --table-font:  "Lucida Sans";
+  --th-row-color:  #c0c0c0;
+  --odd-row-color:  #ffffff; 
+  --even-row-color: #f2f2f2;   
+  --hover-color: #dddddd;
+  --element-name: "Whole Page Background Color";
+}
+
+/*element based selectors*/
+
+body {
+    font: 100% Comic Sans MS, Lucida Sans, Verdana;
+    margin: 20px;
+    line-height: 26px;
+}
+
+a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+	cursor: hand;
+}
+
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table tr:nth-child(even){background-color: var(--even-row-color);}
+
+table tr:nth-child(odd){background-color: var(--odd-row-color);}
+
+table tr:hover {background-color: var(--hover-color);}
+
+td, th {
+    border: 1px solid #ddd;
+}
+
+th {
+    text-align: center;
+    background-color: #c0c0c0;
+    color: black;
+}
+
+caption {
+	font-size:22px;
+}
+
+/*class selectors*/
+
+.noMargin {
+	margin: 0px;
+	text-align:center;
+}
+
+.bottomMargin {
+	margin: 0px 0px 4px 0px;
+	text-align:center;
+}
+
+.bigbottommargin {
+    margin: 0px 0px 20px 0px;
+    width: 70%
+}
+
+.negMargin {
+	margin: -10px;
+	text-align:center;
+}
+
+.topMargin {
+   position: relative;         
+   top: 11px;
+}
+
+.stretchandcenter {
+    width: 70%;
+}
+
+.container {
+    xmin-width: 900px;
+}
+
+.wrapper {
+    position: relative;
+    overflow: auto;
+}
+
+.has-error input{
+    border:1px solid red;
+}
+
+.downloadpanel {
+   text-align: center;
+   border-radius: 10px;
+   position: relative;         
+   cursor: pointer;
+   background-color: white;
+   height:30px;
+   width:400px;
+   margin:auto;
+}
+
+.noColor {
+    /*this class to exclude colorizing*/
+}
+
+/*ID selectors*/
+#toppanel, #picklistpanel, #bottompanel, #colorpanel, #fontpanel, #helppanel, #themepanel {
+    border-radius: 4px;
+    margin: 4px;
+	background-color:  #f1f1f1;
+}
+
+#toppanel {
+    padding: 5px;
+	text-align: center;
+}
+
+#leftcolumn {	
+    float: left;
+    width: 300px;
+	margin-bottom:4px;
+}
+
+#colorpanel {
+    width: 300px;
+	height: 280px;
+    float: left;
+}
+
+#fontpanel {
+    width: 300px;
+	height: 75px;
+    float: left;
+}
+
+#helppanel {
+   text-align: center;
+   float: right;
+   width: 60px;
+   height:60px;
+   border-radius: 50%;
+   position: relative;         
+   top:-25px;
+   cursor: pointer;    
+}
+
+#themepanel {
+    width: 300px;
+	height: 75px;
+    float: left;
+}
+
+#picklistpanel {
+    width: 300px;
+	height: 280px;
+	text-align:left;
+	float: left;
+}
+
+#bottompanel {
+    text-align: center;
+    padding: 10px;
+    font-size: 70%;
+    line-height: 14px;
+	clear:both;
+}
+
+#main {
+	width="600px;
+	font: Comic Sans MS;
+    padding: 0px 0px 0px 50px;
+    margin: 0px 0px 0px 200px;
+	text-align: left;
+}
+
+#toppanel h1, #toppanel p, #menulist {
+    margin: 0;
+    padding: 0;
+}
+
+#selectedcolor {
+    border:1px solid #e3e3e3;
+    width:80%;
+    height:300px;
+    margin:auto;
+}
+#divpreview {
+    border:1px solid #e3e3e3;
+    width:40px;
+    height:40px;
+    margin:auto;
+    visibility:hidden;
+	float:left;
+	position: relative; 
+	top: -250px; 
+	left: 222px; 
+}
+
+#entercolorDIVlabel {
+    text-align:left;
+	clear:left;	
+    position:relative;
+	top: -67px;
+	left: -25px;
+}
+
+#entercolorDIV input{
+	/*height:20px;*/
+    width:40%;
+    border:1px solid #d3d3d3;
+	float:left;
+	position: relative;
+	top: 0px;
+	left: -65px;
+}
+
+#entercolorDIV button{
+	/*height:20px;*/
+	width:30px;
+	position: relative;
+	top: 0px;
+	left: -65px;
+    border:1px solid #d3d3d3;
+	float:left;	
+}
+
+#html5DIV {
+	position: relative; 
+	top: -119px; 
+	left: 158px; 
+}
+
+#html5colorpicker {
+	height: 16px;
+	width: 100px;
+	cursor: pointer;
+    top:-8px;
+    position: relative;
+} 
+
+#selectedhexagon {
+    visibility: visible; 
+    position: relative; 
+    width: 21px; 
+    height: 21px; 
+    background-image: url("images/img_selectedcolor.gif"); 
+    top: -120px; 
+    left: 128px;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

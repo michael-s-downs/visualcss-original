@@ -1,0 +1,18 @@
+<script src="script/jquery.fontselect.js"></script>  
+<link rel="stylesheet" type="text/css" href="css/fontselect-alternate.css"/>  
+<h3 class="bottomMargin">FONT</h3>
+<input id="font" type="text"/>
+<script>
+/*
+This inline script (for the font-chooser change-event) helps fix the initial load order.  Look to changeElementsFont(font) for application of fonts to element list
+*/
+$(function(){
+	$('#font').fontselect().change(function(){
+	  // replace + signs with spaces for css
+	  var font = $(this).val().replace(/\+/g, ' ');	  
+	  // split font into family and weight
+	  font = font.split(':');	  
+      changeElementsFont(font[0]);     
+	});
+});
+</script>

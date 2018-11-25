@@ -1,0 +1,132 @@
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p class="noColor">Some text in the Modal..</p>
+                </div>
+            </div>
+      <h3>This is your Palette - Use this space to mix, preview and download your own CSS themes:</h3>
+        <p>Try these steps:
+        	<ul>
+        		<li><strong><em>INSTANTLY PREVIEW:</em></strong> Use the widgets in the left column to combine colors, fonts and elements and judge what works together visually.</li>
+        		<li><strong><em>DISPLAY SPECIFICS:</em></strong> You may want to just Copy-Paste one quick CSS info directly from the palette's display table</li>
+        		<li><strong><em>GENERATE CSS FILE:</em></strong> Like what you've mixed?  Click the big button at the bottom to download a complete CSS file &amp; drop it in your own web project!</li>
+        	</ul>
+<table class= "bigbottommargin">
+  <caption>Programming Information on Colors and Fonts Now Showing on this Palette</caption>
+  <tr>
+    <th>Element/Attribute</th>
+	<th>Font</th>
+    <th>Color Name</th>
+    <th>Color Hex</th>
+    <th>Color RGB</th>
+    <th>Color HSL</th>	
+  </tr>
+  <tr>
+    <td>Page Background</td>
+    <td>Not Applicable</td>
+    <td id="colornamDIVpageBackground">White</td>
+    <td id="colorhexDIVpageBackground">#ffffff</td>
+    <td id="colorrgbDIVpageBackground">rgb(255, 255, 255)</td>
+    <td id="colorhslDIVpageBackground">hsl(0, 0%, 100%)</td>	
+  </tr>
+  <tr>
+    <td>&lt;H1&gt; - &lt;H5&gt; Text</td>
+    <td id="fontDIVh3">Lucida Sans</td>
+    <td id="colornamDIVh3">Black</td>
+    <td id="colorhexDIVh3">#000000</td>
+    <td id="colorrgbDIVh3">rgb(0, 0, 0)</td>
+	<td id="colorhslDIVh3">hsl(0, 0%, 0%)</td>
+  </tr>
+  <tr>
+    <td>&lt;P&gt; Text</td>
+    <td id="fontDIVp">Lucida Sans</td>
+    <td id="colornamDIVp">Black</td>
+    <td id="colorhexDIVp">#000000</td>
+    <td id="colorrgbDIVp">rgb(0, 0, 0)</td>
+	<td id="colorhslDIVp">hsl(0, 0%, 0%)</td>
+  </tr>
+  <tr>
+    <td>&lt;Caption&gt; Text</td>
+    <td id="fontDIVcaption">Lucida Sans</td>
+    <td id="colornamDIVcaption">Black</td>
+    <td id="colorhexDIVcaption">#000000</td>
+    <td id="colorrgbDIVcaption">rgb(0, 0, 0)</td>
+	<td id="colorhslDIVcaption">hsl(0, 0%, 0%)</td>
+  </tr>  
+  <tr>
+    <td>&lt;TH&gt; & &lt;TR&gt; Text</td>
+    <td id="fontDIVthText">Lucida Sans</td>
+    <td id="colornamDIVthText">Black</td>
+    <td id="colorhexDIVthText">#000000</td>
+    <td id="colorrgbDIVthText">rgb(0, 0, 0)</td>
+	<td id="colorhslDIVthText">hsl(0, 0%, 0%)</td>
+  </tr>  
+  <tr>
+    <td>&lt;TH&gt; Background</td>
+    <td>Not Applicable</td>
+    <td id="colornamDIVthBg">Silver</td>
+    <td id="colorhexDIVthBg">#c0c0c0</td>
+    <td id="colorrgbDIVthBg">rgb(192, 192, 192)</td>
+	<td id="colorhslDIVthBg">hsl(0, 0%, 75%)</td>
+  </tr>
+  <tr>
+    <td>&lt;TR&gt; odd background</td>
+    <td>Not Applicable</td>
+    <td id="colornamDIVtrOdd">White</td>
+    <td id="colorhexDIVtrOdd">#ffffff</td>
+    <td id="colorrgbDIVtrOdd">rgb(255, 255, 255)</td>
+    <td id="colorhslDIVtrOdd">hsl(0, 0%, 100%)</td>
+  </tr> 
+  <tr>
+    <td>&lt;TR&gt; even background</td>
+    <td>Not Applicable</td>
+    <td id="colornamDIVtrEven">Not Named</td>
+    <td id="colorhexDIVtrEven">#f2f2f2</td>
+    <td id="colorrgbDIVtrEven">rgb(242, 242, 242)</td>
+    <td id="colorhslDIVtrEven">hsl(0, 0%, 95%)</td>
+  </tr>  
+  <tr>
+    <td>&lt;TR&gt; hover background</td>
+    <td>Not Applicable</td>
+    <td id="colornamDIVtrHover">Not Named</td>
+    <td id="colorhexDIVtrHover">#dddddd</td>
+    <td id="colorrgbDIVtrHover">rgb(221, 221, 221)</td>
+    <td id="colorhslDIVtrHover">hsl(0, 0%, 87%)</td>
+  </tr>
+</table>
+<div class="stretchandcenter">
+    <div id="downloadpanel" class="downloadpanel" onClick="downloadStylesheetTest();"><h3 class="noMargin">Download this theme as a CSS file.</h3></div>
+</div>
+<script>
+    $(document).ready(function(){ 
+        /*INITIALIZING DOM MANIPULATIONS:  MODAL EVENT ATTACHMENTS */    
+        var modal = document.getElementById('myModal');
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Turn circular helppanel into a button that opens the modal
+        var btn = document.getElementById('helppanel');
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }        
+        //$('#downloadpanel').circleType();
+        //$('#downloadpanel').circleType({radius: 90, dir: -1});  
+    });
+</script>

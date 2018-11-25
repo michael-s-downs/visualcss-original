@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- SCRIPT & CSS INCLUSIONS: see individual files for details --> 
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="script/w3color.js"></script>   
+        <script src="script/jquery.circletype.js"></script>
+        <script src="script/jquery.lettering.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/visual.css"/>  
+        <script src="script/visualcss.js"></script>         
+    </head>
+    <body>
+        <!-- CONTENT INCLUSIONS:  HTML is chunked and injected for structural clarity. This requires a Web-Server -->
+        <div id="toppanel">&nbsp;</div>
+        <div id="leftcolumn">
+           <div id="colorpanel">&nbsp;</div>
+           <div id="picklistpanel">&nbsp;</div>		
+           <div id="fontpanel">&nbsp;</div>
+	       <div id="themepanel">&nbsp;</div>
+        </div>
+        <div id="main" class="wrapper">&nbsp;</div>
+        <div id="bottompanel">                 
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+            </a>This work is licensed under a 
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+        </div>
+    </body>
+    <script>
+        /*LOAD ORCHESTRATION: This in-line script orchestrates the main injection of HTML chunks.  
+        each individual chunk may also orchestrate initializing its own elements, and calls to libs, before
+        getting added here...*/
+        
+    $(document).ready(function(){      
+        console.log("loading panel content");        
+        //load HTML chunks... 
+        $( "#toppanel" ).load( "toppanel.html" );   
+        $( "#colorpanel" ).load( "colorpanel.html" );
+        $( "#fontpanel" ).load( "fontpanel.html" );
+        $( "#themepanel" ).load( "themepanel.html" );
+        $( "#main" ).load( "main.html" );
+        $( "#picklistpanel" ).load( "picklistpanel.html" );
+    });
+    </script>
+</html> 

@@ -1,0 +1,56 @@
+<h3 class="bottomMargin" style="text-align:center;">SAMPLES</h3>
+<div style="float:left;">
+    <div class="tooltip">future feature
+        <span class="tooltiptext">pre-generated sample selector coming soon!</span>
+    </div>
+</div>
+<div id="helppanel">
+    <h5 class="noMargin" id="curvehelp">Help</h5><h5 class="noMargin" id="curveinfo">Info</h5>
+</div>
+<style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border: 1px dotted black;
+    padding: 0px 10px 0px 10px;
+    margin-left: 10px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+</style>
+<script>
+    /* INITIALIZING DOM MANIPULATIONS:  Initializations specific to this chunk must occur here, 
+    in this case bending/curving the help and info texts */
+    $(document).ready(function(){
+        $('#curvehelp').circleType({radius: 60});
+        $('#curveinfo').circleType({radius: 60, dir: -1});  
+    });
+</script>
